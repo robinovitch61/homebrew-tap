@@ -5,11 +5,11 @@
 class WebtoonDl < Formula
   desc "Download webtoon comics as pdfs."
   homepage "https://github.com/robinovitch61/webtoon-dl"
-  version "0.0.2"
+  version "0.0.3"
 
   on_macos do
-    url "https://github.com/robinovitch61/webtoon-dl/releases/download/v0.0.2/webtoon-dl_0.0.2_Darwin_all.tar.gz"
-    sha256 "a3be3dc05a4fd5c239a34065d22d01ca1f0d89818ea32d73da2a9b9056da2a13"
+    url "https://github.com/robinovitch61/webtoon-dl/releases/download/v0.0.3/webtoon-dl_0.0.3_Darwin_all.tar.gz"
+    sha256 "1ec0e0dbeb80f9de0e6c68991fc0d37f614fe12504ec3a90a7c28b87a9eef0f9"
 
     def install
       bin.install "webtoon-dl"
@@ -18,16 +18,16 @@ class WebtoonDl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/robinovitch61/webtoon-dl/releases/download/v0.0.2/webtoon-dl_0.0.2_Linux_arm64.tar.gz"
-      sha256 "791967f84e75bd248fbfc3f811c2f4b6845db69436cf424405a8abf7a878b7f9"
+      url "https://github.com/robinovitch61/webtoon-dl/releases/download/v0.0.3/webtoon-dl_0.0.3_Linux_arm64.tar.gz"
+      sha256 "209f91012226a47ce1d2be6be11cd7eb2c86ad4ca9ce1930798f34049f85af29"
 
       def install
         bin.install "webtoon-dl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/robinovitch61/webtoon-dl/releases/download/v0.0.2/webtoon-dl_0.0.2_Linux_x86_64.tar.gz"
-      sha256 "57658f04e5a092079cf68bf94efe68d45ee9b170fb54133acf0350fa0c62e943"
+      url "https://github.com/robinovitch61/webtoon-dl/releases/download/v0.0.3/webtoon-dl_0.0.3_Linux_x86_64.tar.gz"
+      sha256 "15165c3097a90c3672c7416bfdeabcb6491ea730ac304530057672c154f657ef"
 
       def install
         bin.install "webtoon-dl"
