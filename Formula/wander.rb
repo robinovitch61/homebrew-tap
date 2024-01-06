@@ -5,11 +5,11 @@
 class Wander < Formula
   desc "An efficient terminal application/TUI for interacting with your HashiCorp Nomad cluster."
   homepage "https://github.com/robinovitch61/wander"
-  version "0.14.1"
+  version "1.0.0"
 
   on_macos do
-    url "https://github.com/robinovitch61/wander/releases/download/v0.14.1/wander_0.14.1_Darwin_all.tar.gz"
-    sha256 "08b14a661435c1b13d521d7310352a5dfa5152cb9e1f40a046a5aecc5fd54b7a"
+    url "https://github.com/robinovitch61/wander/releases/download/v1.0.0/wander_1.0.0_Darwin_all.tar.gz"
+    sha256 "c9468f918df8573c3794024f881fdacbd09d3359001a5bc3856f4ae92e7ca31f"
 
     def install
       bin.install "wander"
@@ -18,16 +18,16 @@ class Wander < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/robinovitch61/wander/releases/download/v0.14.1/wander_0.14.1_Linux_x86_64.tar.gz"
-      sha256 "1bbcd84c4d791660a5a13bd69c35e231e0de5ed31392a41e05c21f3e5eea70e9"
+      url "https://github.com/robinovitch61/wander/releases/download/v1.0.0/wander_1.0.0_Linux_x86_64.tar.gz"
+      sha256 "1409b34585856cd03d03ca303b38b999d2fb18ed7a73af9ef7805623ed418e13"
 
       def install
         bin.install "wander"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/robinovitch61/wander/releases/download/v0.14.1/wander_0.14.1_Linux_arm64.tar.gz"
-      sha256 "1cb220283926ca720edf5979c4185d37703044d8a3e377968a2fd87151c0de54"
+      url "https://github.com/robinovitch61/wander/releases/download/v1.0.0/wander_1.0.0_Linux_arm64.tar.gz"
+      sha256 "11e347e1d15e6fea959be615123aa9f81441afe95370b011dff8c9662e3696fb"
 
       def install
         bin.install "wander"
