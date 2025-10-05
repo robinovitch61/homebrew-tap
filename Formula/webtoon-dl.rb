@@ -5,11 +5,11 @@
 class WebtoonDl < Formula
   desc "A cli for downloading content from webtoon.com"
   homepage "https://github.com/robinovitch61/webtoon-dl"
-  version "0.0.11"
+  version "0.0.12"
 
   on_macos do
-    url "https://github.com/robinovitch61/webtoon-dl/releases/download/v0.0.11/webtoon-dl_0.0.11_Darwin_all.tar.gz"
-    sha256 "37b871709a32494a107921955bdf2855f82ac827bc9574a831f381df28831032"
+    url "https://github.com/robinovitch61/webtoon-dl/releases/download/v0.0.12/webtoon-dl_0.0.12_Darwin_all.tar.gz"
+    sha256 "2080e7b1d40a9f5aa1666c605b286e4234ee05f7461036c63a46cf4f87dcb1e2"
 
     def install
       bin.install "webtoon-dl"
@@ -17,24 +17,18 @@ class WebtoonDl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/robinovitch61/webtoon-dl/releases/download/v0.0.11/webtoon-dl_0.0.11_Linux_x86_64.tar.gz"
-        sha256 "de13e75a2100e1d1251a67d6387ccb3c1a7ac77f78589679a77588889bed940e"
-
-        def install
-          bin.install "webtoon-dl"
-        end
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/robinovitch61/webtoon-dl/releases/download/v0.0.12/webtoon-dl_0.0.12_Linux_x86_64.tar.gz"
+      sha256 "cbe0084309ea7e59c55db79bef7c53947b825a31a058a641ebde7441c2968dbb"
+      def install
+        bin.install "webtoon-dl"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/robinovitch61/webtoon-dl/releases/download/v0.0.11/webtoon-dl_0.0.11_Linux_arm64.tar.gz"
-        sha256 "34483ca903622090e0cf6336a58b041ba606a3909e94ecb30afe6a179b21dbfb"
-
-        def install
-          bin.install "webtoon-dl"
-        end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/robinovitch61/webtoon-dl/releases/download/v0.0.12/webtoon-dl_0.0.12_Linux_arm64.tar.gz"
+      sha256 "6d94bd5c0f005e2f7e8e704943ed5ef45b4145382179bd063c442f98e599eda4"
+      def install
+        bin.install "webtoon-dl"
       end
     end
   end
