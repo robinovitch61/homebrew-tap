@@ -5,11 +5,11 @@
 class Lore < Formula
   desc "A terminal pager with search, filter, and selection."
   homepage "https://github.com/robinovitch61/lore"
-  version "0.2.0"
+  version "0.3.0"
 
   on_macos do
-    url "https://github.com/robinovitch61/lore/releases/download/v0.2.0/lore_0.2.0_Darwin_all.tar.gz"
-    sha256 "0fec848ebcad6413aaef6d89d7105bdc77d0921e064e45e4c712d49b36b012dc"
+    url "https://github.com/robinovitch61/lore/releases/download/v0.3.0/lore_0.3.0_Darwin_all.tar.gz"
+    sha256 "3250d50a019577aeb64ca8bdf3bfbb9ab25192cdb34cd9b704884fe1998dac3e"
 
     define_method(:install) do
       bin.install "lore"
@@ -18,15 +18,15 @@ class Lore < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/robinovitch61/lore/releases/download/v0.2.0/lore_0.2.0_Linux_x86_64.tar.gz"
-      sha256 "9c659fd1ba18557af524291f6fa699b3f2dcef6917bdfc0c8aa42d70df670b28"
+      url "https://github.com/robinovitch61/lore/releases/download/v0.3.0/lore_0.3.0_Linux_x86_64.tar.gz"
+      sha256 "b786e00b76b7ccda4f6a91820f9a10883e7a879c9b0ddd4efa458fe50f520110"
       define_method(:install) do
         bin.install "lore"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/robinovitch61/lore/releases/download/v0.2.0/lore_0.2.0_Linux_arm64.tar.gz"
-      sha256 "8aecc8d4fa807197dd9c160228b9ffbcf0d1082f7eed609efd0345ca964766e5"
+      url "https://github.com/robinovitch61/lore/releases/download/v0.3.0/lore_0.3.0_Linux_arm64.tar.gz"
+      sha256 "6a6260cefe3b83450153fcb0e6af9145e0a9521772d04fcf248fea6dcfcb5c5b"
       define_method(:install) do
         bin.install "lore"
       end
