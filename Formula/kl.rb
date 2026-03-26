@@ -5,11 +5,11 @@
 class Kl < Formula
   desc "An interactive Kubernetes log viewer for your terminal."
   homepage "https://github.com/robinovitch61/kl"
-  version "0.7.0"
+  version "0.8.0"
 
   on_macos do
-    url "https://github.com/robinovitch61/kl/releases/download/v0.7.0/kl_0.7.0_Darwin_all.tar.gz"
-    sha256 "d64a98886b216d00f6b05b99f1a6c9dfeaaa3c12314ccbaf2409eadb884dc8bb"
+    url "https://github.com/robinovitch61/kl/releases/download/v0.8.0/kl_0.8.0_Darwin_all.tar.gz"
+    sha256 "fc82a7fc865811e2f177f4bc4d30df67f19a443d6985e27661740be7f187e502"
 
     define_method(:install) do
       bin.install "kl"
@@ -18,15 +18,15 @@ class Kl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/robinovitch61/kl/releases/download/v0.7.0/kl_0.7.0_Linux_x86_64.tar.gz"
-      sha256 "949b76ffac1922cda511fbe7390fb223644e12b314b7eba6672b5522e7dd7496"
+      url "https://github.com/robinovitch61/kl/releases/download/v0.8.0/kl_0.8.0_Linux_x86_64.tar.gz"
+      sha256 "1bbca679d01eafe4cebc2677932eb233422a38eaad5fdee90c54066b5318c484"
       define_method(:install) do
         bin.install "kl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/robinovitch61/kl/releases/download/v0.7.0/kl_0.7.0_Linux_arm64.tar.gz"
-      sha256 "3ef62bf5bb185f997881570a2127da27dd970c77a2a1c08d29bbe0c75a7f9280"
+      url "https://github.com/robinovitch61/kl/releases/download/v0.8.0/kl_0.8.0_Linux_arm64.tar.gz"
+      sha256 "5df8e54887b2f9afe9120d0ac0322d048b1ea1032e7f4d81e36018cbc0bfb404"
       define_method(:install) do
         bin.install "kl"
       end
