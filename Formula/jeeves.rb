@@ -9,7 +9,7 @@ class Jeeves < Formula
 
   on_macos do
     url "https://github.com/robinovitch61/jeeves/releases/download/v0.2.0/jeeves_0.2.0_Darwin_all.tar.gz"
-    sha256 "42478a9bbb54eee815e8dc36d2eab87a56fe22bbb4bca5f84a2eec8ffaeed2b2"
+    sha256 "adad16675bcea37620d89b850f150681073c62a6cd544767f895f2efc89a140f"
 
     define_method(:install) do
       bin.install "jeeves"
@@ -19,14 +19,14 @@ class Jeeves < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/robinovitch61/jeeves/releases/download/v0.2.0/jeeves_0.2.0_Linux_x86_64.tar.gz"
-      sha256 "57db7de6c79de069697aff0e111075c731768ab7d69245dd8caf68a591b27a0a"
+      sha256 "739d9feaa1783e60316dcd52e533e8fc52dc0d79748f922c647ca18d423e60de"
       define_method(:install) do
         bin.install "jeeves"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/robinovitch61/jeeves/releases/download/v0.2.0/jeeves_0.2.0_Linux_arm64.tar.gz"
-      sha256 "af2b840a6167be2b449e11958c9654b985c515f865d6024edebf0af3b14263e6"
+      sha256 "eefa5db4883dd3168b1c60591b3b5167342a2251ed591afd0ee5465a36246c69"
       define_method(:install) do
         bin.install "jeeves"
       end
