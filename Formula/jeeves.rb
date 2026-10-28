@@ -5,11 +5,11 @@
 class Jeeves < Formula
   desc "A TUI for AI agent sessions."
   homepage "https://github.com/robinovitch61/jeeves"
-  version "0.5.0"
+  version "0.5.1"
 
   on_macos do
-    url "https://github.com/robinovitch61/jeeves/releases/download/v0.5.0/jeeves_0.5.0_Darwin_all.tar.gz"
-    sha256 "6be95655a28f2d0ed114fca58318305d14c5e74b65118f03591defbbfb98c4a5"
+    url "https://github.com/robinovitch61/jeeves/releases/download/v0.5.1/jeeves_0.5.1_Darwin_all.tar.gz"
+    sha256 "90dba3f0797147d35315820dfca9fa03fcad6216df74acdab2275c4202032686"
 
     define_method(:install) do
       bin.install "jeeves"
@@ -18,15 +18,15 @@ class Jeeves < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/robinovitch61/jeeves/releases/download/v0.5.0/jeeves_0.5.0_Linux_x86_64.tar.gz"
-      sha256 "291071443e79d713bbd8a74d9b1f8a196ca640e636b99757b7b39a34230ade69"
+      url "https://github.com/robinovitch61/jeeves/releases/download/v0.5.1/jeeves_0.5.1_Linux_x86_64.tar.gz"
+      sha256 "423da441ff53d1ff2952b4ea5c4042e672afe2cd88847f68c26d7b92132e9c91"
       define_method(:install) do
         bin.install "jeeves"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/robinovitch61/jeeves/releases/download/v0.5.0/jeeves_0.5.0_Linux_arm64.tar.gz"
-      sha256 "b3445f1aa18df3ac1713fe633ac892cf0edb656b8251e0d06f51e6a10fc0fc0f"
+      url "https://github.com/robinovitch61/jeeves/releases/download/v0.5.1/jeeves_0.5.1_Linux_arm64.tar.gz"
+      sha256 "d412b5839000a1dd9fd2cc019b34f02d33d766c74b0b325bc67856cacda913bd"
       define_method(:install) do
         bin.install "jeeves"
       end
